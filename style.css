@@ -1,0 +1,35 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: grid;
+  height: 100vh;
+  grid-template-columns: 3fr 1fr;
+  /* column-gap: 10px;
+  row-gap: 10px; */
+}
+
+.left {
+  display: grid;
+  grid-template-rows: 100px 1fr;
+  /* row-gap: 10px; */
+}
+
+.main-container {
+  background-color: grey;
+  /* border-radius: 8px; */
+}
+
+.header-container {
+  background-color: rgb(26, 26, 112);
+  height: 100px;
+  /* border-radius: 8px; */
+}
+
+.right {
+  height: 100vh;
+  background-color: rgb(219, 170, 234);
+  /* border-radius: 8px; */
+}
