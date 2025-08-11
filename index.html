@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Editor de memes</title>
+    <title>Meme Generator</title>
 
     <link rel="stylesheet" href="style.css" />
   </head>
@@ -11,12 +11,146 @@
   <body>
     <div class="container">
       <div class="left">
-        <header class="header-container">Header</header>
+        <header class="header-container">
+          <h1 class="title">Meme Generator</h1>
 
-        <main class="main-container">Contenido</main>
+          <!-- Botones del header -->
+          <nav class="header-buttons">
+            <ul class="nav-list">
+              <li id="img-btn" class="button">Imagen</li>
+              <li id="txt-btn" class="button">Texto</li>
+              <li id="light-mode-btn" class="hidden button">Modo Claro</li>
+              <li id="dark-mode-btn" class="button">Modo Oscuro</li>
+            </ul>
+          </nav>
+        </header>
+
+        <main class="main-container">
+          <!-- Vista previa del meme -->
+          <div class="meme-preview">
+            <p id="top-text">Top Text</p>
+            <div id="meme-image" class="meme-image">Imagen</div>
+            <p id="bottom-text">Bottom Text</p>
+          </div>
+        </main>
       </div>
 
-      <aside class="right">aside</aside>
+      <!-- panel de control -->
+
+      <aside class="right">
+        <section>
+          <h3>Imagen</h3>
+
+          <!-- Input para ingresar la URL de la imagen -->
+          <label for="image-url">URL de la imagen:</label>
+          <input
+            type="text"
+            id="image-url"
+            placeholder="Pega la URL de una imagen"
+          />
+        </section>
+
+        <!-- Texto del meme -->
+        <section>
+          <h3>Texto del meme</h3>
+
+          <!-- Input para texto superior -->
+          <label for="top-text">Texto superior:</label>
+          <input
+            type="text"
+            id="top-text-input"
+            placeholder="Texto en la parte superior"
+          />
+
+          <!-- Checkbox para ocultar texto superior -->
+          <label>
+            <input type="checkbox" id="hide-top-text" /> Sin texto superior
+          </label>
+
+          <!-- Input para texto inferior -->
+          <label for="bottom-text">Texto inferior:</label>
+          <input
+            type="text"
+            id="bottom-text-input"
+            placeholder="Texto en la parte inferior"
+          />
+
+          <!-- Checkbox para ocultar texto inferior -->
+          <label>
+            <input type="checkbox" id="hide-bottom-text" /> Sin texto inferior
+          </label>
+        </section>
+
+        <!-- Colores -->
+        <section>
+          <h3>Colores</h3>
+
+          <!-- Color del texto -->
+          <label for="text-color">Color del texto:</label>
+          <input type="color" id="text-color" value="#000000" />
+
+          <!-- Color de fondo del texto -->
+          <label for="bg-color">Fondo del texto:</label>
+          <input type="color" id="bg-color" value="#ffffff" />
+
+          <!-- Checkbox para fondo transparente -->
+          <label>
+            <input type="checkbox" id="transparent-bg" /> Fondo transparente
+          </label>
+        </section>
+
+        <!-- Tipografía -->
+        <section>
+          <h3>Fuente</h3>
+
+          <!-- Selección de tipo de letra -->
+          <label for="font-family">Tipo de letra:</label>
+          <select id="font-family">
+            <option value="Arial">Arial</option>
+            <option value="Verdana">Verdana</option>
+            <option value="Impact">Impact</option>
+            <option value="Georgia">Georgia</option>
+          </select>
+
+          <!-- Tamaño de letra -->
+          <label for="font-size">Tamaño (px):</label>
+          <input type="number" id="font-size" value="40" min="12" max="100" />
+
+          <!-- Alineación del texto -->
+          <div>
+            <p>Alineación del texto:</p>
+            <button id="align-left">Izquierda</button>
+            <button id="align-center">Centro</button>
+            <button id="align-right">Derecha</button>
+          </div>
+        </section>
+
+        <!-- Contorno del texto -->
+        <section>
+          <h3>Contorno</h3>
+          <button id="outline-none">Ninguno</button>
+          <button id="outline-light">Claro</button>
+          <button id="outline-dark">Oscuro</button>
+        </section>
+
+        <!-- Espaciado e interlineado -->
+        <section>
+          <h3>Espaciado</h3>
+
+          <!-- Espaciado interior (padding) -->
+          <label for="padding">Espaciado (padding):</label>
+          <input type="number" id="padding" value="10" min="0" max="50" />
+
+          <!-- Interlineado (line-height) -->
+          <label for="line-height">Interlineado:</label>
+          <select id="line-height">
+            <option value="1">1</option>
+            <option value="1.2">1.2</option>
+            <option value="1.5">1.5</option>
+            <option value="2">2</option>
+          </select>
+        </section>
+      </aside>
     </div>
   </body>
 </html>
