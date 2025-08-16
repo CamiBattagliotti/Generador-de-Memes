@@ -44,22 +44,58 @@ list-style: none;
 .main-container {
   background-color: grey;
   height: 80%;
-  /* border-radius: 8px; */
+}
+
+.meme-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  border: 2px solid blanchedalmond;
+  height: 85%;
+  width: 50%;
+  margin: auto;
 }
 
 
+.text-box{
+  display: flex;
+  align-items: center;
+  height: 20%; 
+  border: 3px solid red;
+  width: 100%;
+}
+
+.meme-text{
+  font-size: 3em;
+  text-align: center;
+  /* por defecto se alinea arriba a la izquierda */
+  border: 3px solid black;
+  width: 100%;
+}
+
+.meme-image{
+  text-align: center;
+  border: 2px solid white;
+}
+
+.download-btn{
+  border: 1px solid red;
+  height: 30px;
+  width: 10em;
+  display: block;          /* <- clave para que funcione el margin: auto */
+  margin: 25px auto 0;
+  background-color: rgb(50, 167, 128);
+}
 
 .button{
   font-size: 2em;
 }
 
-
-
 .right {
   height: 100vh;
   width: 20%;
   background-color: rgb(219, 170, 234);
-  /* border-radius: 8px; */
 }
 
 .hidden {
